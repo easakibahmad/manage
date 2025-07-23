@@ -1,45 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import type { DriveFile, DriveImageFetcherProps } from "../types/drive_image_fetcher";
+import type { DriveImageFetcherProps } from "../types/drive_image_fetcher";
+import { useDriveImages } from "../custom_hooks/drive_hook";
 
 const DriveImageFetcher: React.FC<DriveImageFetcherProps> = ({ folderId, apiKey }) => {
-  const [images, setImages] = useState<DriveFile[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        // Query files that are images in the folder and not trashed
-        const query = `'${folderId}' in parents and mimeType contains 'image/' and trashed = false`;
-        const url = `${import.meta.env.VITE_GOOGLE_APIS}/drive/v3/files?q=${encodeURIComponent(query)}&key=${apiKey}&fields=files(id,name,mimeType)`;
-
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`Error: ${res.status} ${res.statusText}`);
-
-        const data = await res.json();
-        console.log("data", data);
-        setImages(data.files || []);
-
-        // Log URLs for each image
-        data.files.forEach((file: DriveFile) => {
-          const imageUrl = `${import.meta.env.VITE_DRIVE_GOOGLE}/uc?id=${file.id}`;
-          console.log(`Image: ${file.name}`, imageUrl);
-        });
-      } catch (err: any) {
-        setError(err.message || "Unknown error");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (folderId && apiKey) {
-      fetchImages();
-    }
-  }, [folderId, apiKey]);
+  const { images, loading, error } = useDriveImages(folderId, apiKey);
 
   if (loading) return <p>Loading images...</p>;
   if (error) return <p>Error: {error}</p>;

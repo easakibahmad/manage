@@ -9,4 +9,10 @@ interface DriveFile {
   mimeType: string;
 }
 
-export type { DriveImageFetcherProps, DriveFile };
+interface UseDriveImagesResult {
+  images: DriveFile[];
+  loading: boolean;
+  error: string | null;
+}
+
+export type { DriveImageFetcherProps, DriveFile, UseDriveImagesResult };
