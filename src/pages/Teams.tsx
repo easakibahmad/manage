@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import TeamMembersDetailPopup from "../components/TeamMembersDetailPopup";
+import CreateTeamPopup from "../components/CreateTeamPopup";
 
 import type { Team } from "../types/teams";
 import useTeams from "../custom_hooks/teams_hook";
@@ -8,6 +9,7 @@ import useTeams from "../custom_hooks/teams_hook";
 const Teams = () => {
   const { teams, loading, error } = useTeams();
   const [selectedTeam, setSelectedTeam] = useState<Team | null>(null);
+  const [showCreatePopup, setShowCreatePopup] = useState(false);
 
   const closeModal = () => setSelectedTeam(null);
 
@@ -16,7 +18,19 @@ const Teams = () => {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
-      <h2 className="text-2xl font-bold mb-6 text-gray-800">Team List</h2>
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-gray-800">Team List</h2>
+        <button
+          onClick={() => setShowCreatePopup(true)}
+          className="px-4 py-2 bg-black rounded-lg transition cursor-pointer"
+        >
+          <span className="text-yellow-400 font-bold">+ Create Your Team</span>
+        </button>
+      </div>
+      {showCreatePopup && (
+        <CreateTeamPopup onClose={() => setShowCreatePopup(false)} />
+      )}
+
       {teams.length === 0 ? (
         <p>No teams available.</p>
       ) : (
@@ -30,7 +44,7 @@ const Teams = () => {
               <p className="text-sm text-gray-500 mt-1">{team.description}</p>
               <p
                 onClick={() => setSelectedTeam(team)}
-                className="text-blue-600 cursor-pointer mt-3 text-sm underline hover:text-blue-800"
+                className="text-black cursor-pointer mt-3 text-sm underline hover:text-yellow-500"
               >
                 Members: {team.members?.length || 0}
               </p>
@@ -39,7 +53,9 @@ const Teams = () => {
         </div>
       )}
 
-      {selectedTeam && ( <TeamMembersDetailPopup selectedTeam={selectedTeam} closeModal={closeModal} />)}
+      {selectedTeam && ( <TeamMembersDetailPopup 
+      selectedTeam={selectedTeam} 
+      closeModal={closeModal} />)}
     </div>
   );
 };

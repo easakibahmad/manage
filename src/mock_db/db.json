@@ -1,16 +1,10 @@
 {
   "teams": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Frontend Wizards",
       "description": "Frontend development team",
       "members": [
-        {
-          "id": 1,
-          "name": "Sakib Ahmad",
-          "email": "sakib@example.com",
-          "role": "Owner"
-        },
         {
           "id": 2,
           "name": "Ayesha Rahman",
@@ -26,30 +20,55 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Backend Ninjas",
       "description": "Backend and API developers",
       "members": []
+    },
+    {
+      "id": "777b",
+      "name": "Machine Learning",
+      "description": "Research about our goals",
+      "members": [
+        {
+          "id": "1",
+          "name": "Sakib Ahmad",
+          "email": "sakib@example.com",
+          "role": "Owner"
+        },
+        {
+          "id": "2",
+          "name": "Ayesha Rahman",
+          "email": "ayesha@example.com",
+          "role": "Owner"
+        },
+        {
+          "id": "3",
+          "name": "Tanvir Hasan",
+          "email": "tanvir@example.com",
+          "role": "Admin"
+        }
+      ]
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Sakib Ahmad",
       "email": "sakib@example.com"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ayesha Rahman",
       "email": "ayesha@example.com"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Tanvir Hasan",
       "email": "tanvir@example.com"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Rahim Uddin",
       "email": "rahim@example.com"
     }

@@ -19,7 +19,7 @@ const TeamMembersDetailPopup = ({selectedTeam, closeModal}: TeamMembersDetailPop
         )}
         <button
             onClick={closeModal}
-            className="mt-6 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
+            className="mt-6 px-4 py-2 bg-black text-yellow-400 hover:underline font-bold text-white rounded-lg transition cursor-pointer"
         >
             Close
         </button>

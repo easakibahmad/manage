@@ -17,4 +17,10 @@ type TeamMembersDetailPopupProps = {
   closeModal: () => void;
 };
 
-export type { Team, Member, TeamMembersDetailPopupProps };
+type User = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+export type { Team, Member, TeamMembersDetailPopupProps, User };
