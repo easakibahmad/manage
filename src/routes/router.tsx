@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router";
+import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
 import Teams from "../pages/Teams";
-import HomeLayout from "../layouts/HomeLayout";
+import Tasks from "../pages/Tasks";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +11,7 @@ export const router = createBrowserRouter([
     children: [
         { index: true, Component: Home },
         { path: "/teams", Component: Teams },
+        { path: "/tasks", Component: Tasks },
     ],
   },
 ]);

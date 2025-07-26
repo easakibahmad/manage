@@ -32,14 +32,20 @@ const NavbarHome = () => {
           </button>
 
           {openDropdown && (
-            <div className="absolute top-full left-0 mt-2 w-40 bg-black border border-yellow-400 hover:underline font-bold rounded shadow-md z-20">
+            <div className="absolute top-full left-0 mt-2 w-40 bg-black border border-yellow-400 font-bold rounded shadow-md z-20">
               <ul className="py-1">
                 <li>
                   <Link
                     to="/teams"
-                    className="block px-4 py-2 transition"
+                    className="block px-4 py-2 transition  hover:underline"
                   >
                     Teams
+                  </Link>
+                  <Link
+                    to="/tasks"
+                    className="block px-4 py-2 transition  hover:underline"
+                  >
+                    Tasks
                   </Link>
                 </li>
               </ul>
