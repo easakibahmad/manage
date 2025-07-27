@@ -3,9 +3,11 @@ import NavbarHome from "../components/shared/NavbarHome"
 
 const HomeLayout = () => {
   return (
-    <div className="h-screen w-screen relative overflow-hidden">
+    <div className="w-full relative overflow-hidden">
       <NavbarHome />
-      <Outlet />  
+      <div className="my-10 h-full">
+        <Outlet />    
+      </div>
     </div>
   )
 }

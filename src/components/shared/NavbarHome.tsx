@@ -35,6 +35,9 @@ const NavbarHome = () => {
             <div className="absolute top-full left-0 mt-2 w-40 bg-black border border-yellow-400 font-bold rounded shadow-md z-20">
               <ul className="py-1">
                 <li>
+                  <Link to="/admin" className="block px-4 py-2 transition  hover:underline">
+                      Admin
+                  </Link>
                   <Link
                     to="/teams"
                     className="block px-4 py-2 transition  hover:underline"
@@ -47,17 +50,25 @@ const NavbarHome = () => {
                   >
                     Tasks
                   </Link>
+                  <Link
+                    to="/about"
+                    className="block px-4 py-2 transition  hover:underline"
+                  >
+                    About
+                  </Link>
                 </li>
               </ul>
             </div>
           )}
         </div>
 
-        <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <div className="">
-            <h1 className="text-xl font-bold">Manage</h1>
-            </div>
-        </Link>
+        <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-8">
+          <Link to="/" className="hover:underline">
+              <div className="">
+              <h1 className="text-xl font-bold">Manage</h1>
+              </div>
+          </Link>
+        </div>
 
         <div className="w-8 h-8" />
       </div>
