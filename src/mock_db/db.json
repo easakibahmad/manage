@@ -103,5 +103,54 @@
       "name": "Rahim Uddin",
       "email": "rahim@example.com"
     }
+  ],
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic",
+      "price": 10,
+      "features": [
+        "5 members",
+        "Email support"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price": 30,
+      "features": [
+        "20 members",
+        "Priority support",
+        "Analytics"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "price": 100,
+      "features": [
+        "Unlimited members",
+        "24/7 support",
+        "Custom solutions"
+      ]
+    }
+  ],
+  "subscriptions": [
+    {
+      "id": "sub-1",
+      "teamId": "1",
+      "planId": "basic",
+      "status": "active",
+      "startDate": "2025-07-01",
+      "endDate": "2025-08-01"
+    },
+    {
+      "id": "97d9",
+      "teamId": "basic",
+      "planId": "basic",
+      "status": "active",
+      "startDate": "2025-07-28T10:33:38.274Z",
+      "endDate": "2025-08-27T10:33:38.274Z"
+    }
   ]
 }
