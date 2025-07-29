@@ -4,9 +4,9 @@ import { Menu } from "lucide-react";
 import Sidebar from "./Sidebar";
 import Navigation from "@/components/common/Navigation";
 
-import { navLinks } from "@/constants/NavbarHome";
+import { navLinks } from "@/constants/MainNav";
 
-const NavbarHome = () => {
+const MainNav = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   
@@ -34,4 +34,4 @@ const NavbarHome = () => {
   );
 };
 
-export default NavbarHome;
+export default MainNav;

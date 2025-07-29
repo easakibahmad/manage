@@ -1,21 +1,16 @@
 import { createBrowserRouter } from "react-router";
-import HomeLayout from "../layouts/HomeLayout";
-import About from "../pages/About";
-import Teams from "../pages/Teams";
-import Tasks from "../pages/Tasks";
-import AdminDashboard from "../components/AdminDashboard";
-import Billing from "../pages/Billing";
-import Content from "../pages/Content";
+import Main from "@/layouts/Main";
+import { About, Teams, Tasks, Billing, Content, Admin } from "@/pages";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: HomeLayout,
+    Component: Main,
     children: [
-        { index: true, Component: AdminDashboard },
+        { index: true, Component: Admin },
         { path: "/teams", Component: Teams },
         { path: "/tasks", Component: Tasks },
-        { path: "/admin", Component: AdminDashboard },
+        { path: "/admin", Component: Admin },
         { path: "/billing", Component: Billing },
         { path: "/content", Component: Content },
     ],

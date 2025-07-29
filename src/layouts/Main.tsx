@@ -1,10 +1,11 @@
 import { Outlet } from "react-router"
-import NavbarHome from "../components/shared/NavbarHome"
 
-const HomeLayout = () => {
+import MainNav from "@/components/common/MainNav"
+
+const Main = () => {
   return (
     <div className="w-full relative overflow-hidden">
-      <NavbarHome />
+      <MainNav />
       <div className="my-10 h-full">
         <Outlet />    
       </div>
@@ -12,4 +13,4 @@ const HomeLayout = () => {
   )
 }
 
-export default HomeLayout
+export default Main
