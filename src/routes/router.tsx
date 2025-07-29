@@ -5,6 +5,7 @@ import Teams from "../pages/Teams";
 import Tasks from "../pages/Tasks";
 import AdminDashboard from "../components/AdminDashboard";
 import Billing from "../pages/Billing";
+import Content from "../pages/Content";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
         { path: "/tasks", Component: Tasks },
         { path: "/admin", Component: AdminDashboard },
         { path: "/billing", Component: Billing },
+        { path: "/content", Component: Content },
     ],
   },
   {

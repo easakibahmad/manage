@@ -12,6 +12,7 @@ const NavbarHome = () => {
     { to: "/teams", label: "Teams" },
     { to: "/tasks", label: "Tasks" },
     { to: "/billing", label: "Billing" },
+    { to: "/content", label: "Content" },
     { to: "/about", label: "About" },
   ];
 
