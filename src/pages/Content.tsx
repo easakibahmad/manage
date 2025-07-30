@@ -1,4 +1,4 @@
-import ContentManager from '@/components/ContentManager'
+import { ContentManager } from "@/components/content"
 
 const Content = () => {
   return (

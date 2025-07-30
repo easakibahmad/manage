@@ -24,9 +24,6 @@ const CustomPopup: React.FC<CustomPopupProps> = ({ isOpen, onClose, children }) 
   return (
     <div className={`modal-overlay ${isOpen ? 'show' : 'hide'}`} ref={overlayRef}>
       <div className="modal-content">
-        <div className="modal-close" onClick={onClose}>
-          <span>close</span>
-        </div>
         {children}
       </div>
     </div>

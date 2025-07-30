@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import type { ContentItem } from "../types/content";
+
+import type { ContentItem } from "@/types/content";
 
 
 type Props = {
-  initialData?: ContentItem;
+  initialData?: ContentItem | null;
   onSave: (item: ContentItem) => void;
   onCancel: () => void;
 };

@@ -8,3 +8,9 @@ export interface ContentItem {
   updatedAt: string;
   status: ContentStatus;
 }
+
+export type ContentListProps = {
+  items: ContentItem[];
+  onEdit: (item: ContentItem) => void;
+  onDelete: (id: string) => void;
+};

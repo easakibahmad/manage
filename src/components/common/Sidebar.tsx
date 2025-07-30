@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         open ? "translate-x-0" : "-translate-x-full"
       } flex flex-col`}
     >
-      <div className="p-4">
+      <div className="p-4 mt-3">
         <input
           type="text"
           placeholder="SEARCH..."
