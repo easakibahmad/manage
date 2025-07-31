@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import TeamMembersDetailPopup from "../components/TeamMembersDetailPopup";
-import CreateTeamPopup from "../components/CreateTeamPopup";
+import TeamMembersDetailPopup from "@/components/TeamMembersDetailPopup";
+import CreateTeamPopup from "@/components/CreateTeamPopup";
 
-import type { Team } from "../types/teams";
-import useTeams from "../custom_hooks/teams_hook";
+import type { Team } from "@/types/teams";
+import useTeams from "@/custom_hooks/teams_hook";
 
 const Teams = () => {
   const { teams, loading, error } = useTeams();
